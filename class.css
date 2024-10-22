@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.icon {
+    border-radius: 50%;
+}
+
+.top {
+    width: 30%;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    margin-left: 5%;
+    z-index: 1;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+header {
+    background-color: black;
+}
+
+.train {
+    position: absolute;
+    top: 90px;
+    left: 55px;
+    font-weight: bolder;
+    font-size: 60px;
+    font-style: italic;
+    color: white;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    position: relative;
+    padding: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: white;
+}
+
+.champion-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.body p {
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
+}
+
+.footerContainer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+   
+    
+}
+
+.footerContainer p {
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-right: 70%;
+    font-weight: bolder;
+    text-align: center;
+  
+}
+
+.kumar-one-regular {
+    font-family: "Kumar One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+    color: gray;
+}
+
+.header1, .train, .champion-text, .footerContainer p, nav li {
+    font-family: 'Kumar One', sans-serif;
+}
+
+table {
+    margin: 20px auto;
+    background-color: white;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+thead {
+    background-color: #f9f9f9;
+}
+
+tr {
+    background-color: #D9D9D9;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+}
+
+.title {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.video-gym {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4e4d50;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    background-color: white;
+    transition: all 0.3s ease;
+    margin-left: 3%;
+}
+
+.menu {
+    display: none;
+    background-color: silver;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    .top {
+        width: 80%;
+    }
+
+    .train {
+        font-size: 40px;
+        left: 10%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu.active {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        width: 80%;
+    }
+
+    .header1 {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .train {
+        font-size: 30px;
+        left: 5%;
+    }
+
+    .champion-text {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .body p {
+        font-size: 18px;
+    }
+
+    .footerContainer p {
+        font-size: 20px;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav li {
+        padding: 10px;
+    }
+
+    .socialIcons a {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: black;
+}
+
+.top {
+    width: 30%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    margin-left: 5%;
+    z-index: 1; 
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.train {
+    position: absolute;
+    top: 90px;
+    left: 55px;
+    font-weight: bolder;
+    font-size: 60px;
+    font-style: italic;
+    color: white;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: white;
+}
+
+.body-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    line-height: 1.5;
+    flex-wrap: wrap;
+}
+
+.home {
+    max-width: 30%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 15px;
+    margin-left: 15%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.home:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    text-align: left;
+    color: black;
+}
+
+.champion-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.body p {
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
+}
+
+.footerContainer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerContainer p {
+    font-size: 24px;
+    margin-bottom: 0;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+    color: gray;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+    background-color: white;
+    transition: all 0.3s ease;
+    margin-left: 3%;
+}
+
+.menu {
+    display: none;
+    background-color: silver;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .home {
+        margin-top: 10%;
+    }
+}
+
+.home {
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .top {
+        width: 80%;
+    }
+
+    .home {
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .train {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .header1 {
+        font-size: 14px;
+    }
+
+    .footerContainer p {
+        font-size: 18px;
+    }
+
+    .footerContainer {
+        padding: 15px;
+    }
+
+    .body-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+.header1, .train, .champion-text, .footerContainer p, nav li {
+    font-family: 'Kumar One', sans-serif;
+}
